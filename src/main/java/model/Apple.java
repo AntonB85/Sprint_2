@@ -1,5 +1,9 @@
 package model;
 
+// Импортируем оба класса из подпакета constants
+import model.constants.Colour;
+import model.constants.Discount;
+
 public class Apple extends Food implements Discountable {
     private String colour; // цвет яблок
 
@@ -14,8 +18,10 @@ public class Apple extends Food implements Discountable {
     // Реализация метода getDiscount из интерфейса Discountable
     @Override
     public double getDiscount() {
-        if ("red".equals(colour)) {  // проверка цвета (учитываем регистр)
-            return 60.0;  // скидка 60% для красных яблок
+        // Используем константу Colour.RED для проверки цвета
+        if (Colour.RED.equals(colour)) {
+            // Используем константу Discount.DISCOUNT_60 вместо числа 60.0
+            return Discount.DISCOUNT_60;  // скидка для красных яблок
         }
         return 0.0;  // для остальных цветов — без скидки
     }

@@ -22,9 +22,9 @@ public class Main {
         double totalWithDiscount = cart.getTotalAmountWithDiscount();
         double vegetarianTotal = cart.getTotalAmountOfVegetarianProducts();
 
-        System.out.println("Общая сумма товаров без скидки: " + totalWithoutDiscount + " руб.");
-        System.out.println("Общая сумма товаров со скидкой: " + totalWithDiscount + " руб.");
-        System.out.println("Сумма всех вегетарианских продуктов без скидки: " + vegetarianTotal + " руб.");
+        System.out.println(String.format("Общая сумма товаров без скидки: %.2f руб.", totalWithoutDiscount));
+        System.out.println(String.format("Общая сумма товаров со скидкой: %.2f руб.", totalWithDiscount));
+        System.out.println(String.format("Сумма всех вегетарианских продуктов без скидки: %.2f руб.", vegetarianTotal));
     }
 }
 
